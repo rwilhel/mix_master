@@ -1,3 +1,5 @@
+<h1>Edit An Artist</h1>
+
 <%= form_for(@artist) do |f| %>
   <% if @artist.errors.any? %>
     <h2><%= pluralize(@artist.errors.count, "error") %> prohibited this record from being saved:</h2>
@@ -7,7 +9,7 @@
       <% end %>
     </ul>
   <% end %>
-  
+
   <%= f.label :name %>
   <%= f.text_field :name %>
 
