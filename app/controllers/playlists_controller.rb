@@ -5,11 +5,11 @@ class PlaylistsController < ApplicationController
 
   def new
     @playlist = Playlist.new
-    @songs = Song.all 
+    @songs = Song.all
   end
 
   def create
-    @playlist = Playlist.new(playlist_params)
+    @playlist = Playlist.create(playlist_params)
     redirect_to @playlist
   end
 

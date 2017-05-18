@@ -4,7 +4,7 @@ RSpec.feature "User creates a playlist" do
   scenario "they can see the page for the single playlist" do
     song_one, song_two, song_three = create_list(:song, 3)
 
-    playlist_name = "Jams"
+    playlist_name = "Music List"
 
     visit playlists_path
     click_on "New Playlist"
@@ -19,7 +19,7 @@ RSpec.feature "User creates a playlist" do
       expect(page).to have_link song_one.title, href: song_path(song_one)
     end
 
-    within("li.last") do
+    within("li:last") do
       expect(page).to have_link song_three.title, href: song_path(song_three)
     end
   end
