@@ -7,7 +7,7 @@ RSpec.feature "User views all playlists" do
     visit playlists_path
 
     playlists.each do |playlist|
-      expect(page).to have_link playlist.name, href: playlists_path(playlist)
+      expect(page).to have_link playlist.name, href: playlist_path(playlist)
     end
   end
 end
